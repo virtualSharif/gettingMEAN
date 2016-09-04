@@ -1,3 +1,1 @@
-# Getting MEAN
-- A practical Workshop
-- $copy; Sharif Malik
+# Getting MEAN  - A practical Workshop | Sharif Malik
