@@ -1,34 +1,47 @@
 var express = require('express');
 var router = express.Router();
 
-var getAllUsers = function() {
-	return [{ 
+var users = [{ 
+			id : 1,
 			firstName : "Sharif", 
 			lastName : "Malik"
 		},
 		{ 
+			id : 2,
 			firstName : "Atul", 
 			lastName : "Ranjan"
 		},
 		{ 
+			id : 3,
 			firstName : "Praphulla", 
 			lastName : "Prakash"
 		}];
+
+
+var getUserById = function (userId) {
+	for(var i=0 ; i < users.length ; i++) {
+		if(users[i].id == userId)
+		{
+			return users[i];	
+		}
+	}	
 };
 
 router.get('/users', function (request, response) {
 	console.log("in findAll");
-	response.send(getAllUsers());
+	response.send(users);
 });
 
 router.get('/users/:userId', function (request, response){
-	console.log("in findone");
-	response.send('HTTP GET Method is called');
+	console.log("in findone : " + request.params.userId);
+	var userId = request.params.userId;
+	response.send(getUserById(userId));
 });
 
 router.post('/users', function (request, response){
 	console.log("in save");
-	response.send('HTTP POST Method is called');
+	users.push(request.body);
+	response.send(request.body);
 });
 
 router.put('/users/:userId', function (request, response){
