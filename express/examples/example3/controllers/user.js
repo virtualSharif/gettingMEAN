@@ -1,47 +1,22 @@
 var express = require('express');
 var router = express.Router();
-
-var users = [{ 
-			id : 1,
-			firstName : "Sharif", 
-			lastName : "Malik"
-		},
-		{ 
-			id : 2,
-			firstName : "Atul", 
-			lastName : "Ranjan"
-		},
-		{ 
-			id : 3,
-			firstName : "Praphulla", 
-			lastName : "Prakash"
-		}];
-
-
-var getUserById = function (userId) {
-	for(var i=0 ; i < users.length ; i++) {
-		if(users[i].id == userId)
-		{
-			return users[i];	
-		}
-	}	
-};
+var userBusinessService = require('../business/userBusinessService');
 
 router.get('/users', function (request, response) {
 	console.log("in findAll");
-	response.send(users);
+	response.send(userBusinessService.findAll());
 });
 
 router.get('/users/:userId', function (request, response){
 	console.log("in findone : " + request.params.userId);
-	var userId = request.params.userId;
-	response.send(getUserById(userId));
+	var userId = request.params.userId;	
+	var returnUsers = userBusinessService.getUserById(userId);
+	response.send(returnUsers);
 });
 
 router.post('/users', function (request, response){
 	console.log("in save");
-	users.push(request.body);
-	response.send(request.body);
+	response.send(userBusinessService.save(request.body));
 });
 
 router.put('/users/:userId', function (request, response){
