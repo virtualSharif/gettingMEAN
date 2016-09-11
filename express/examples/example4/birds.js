@@ -5,10 +5,11 @@ router.use(function(req, res, next) {
 	console.log("Time : " + Date.now());
 	next();
 });
+var homepageHandler =  function (req, res) {
+	res.send('Handler : Birds home page');
+};
 
-router.get('/', function (req, res) {
-	res.send('Birds home page');
-});
+router.get('/',homepageHandler);
 
 router.get('/about', function (req, res) {
 	res.send('About Birds');
