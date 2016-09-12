@@ -26,7 +26,8 @@ router.put('/users/:userId', function (request, response){
 
 router.delete('/users/:userId', function (request, response){
 	console.log("in delete");
-	response.send('HTTP DELETE Method is called');
+	var userId = request.params.userId;
+	response.send(userBusinessService.delete(userId));
 });
 
 module.exports = router;
