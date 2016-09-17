@@ -10,7 +10,7 @@ router.get('/users', function (request, response) {
 router.get('/users/:userId', function (request, response){
 	console.log("in findone : " + request.params.userId);
 	var userId = request.params.userId;	
-	var returnUsers = userBusinessService.getUserById(userId);
+	var returnUsers = userBusinessService.findOne(userId);
 	response.send(returnUsers);
 });
 
