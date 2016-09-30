@@ -1,0 +1,29 @@
+<html ng-app="myApp">
+<head>
+<title>AngularJS MVC Architecture code</title>  
+<script src="./lib/angular.min.js">
+</script>
+<script type="text/javascript">
+
+//Creating controller here  
+var app = angular.module('myApp', []);  
+    app.controller('UserController', function($scope) {  
+    //Creating model here
+	$scope.user =  {  
+         'name'    :   'Sharif Malik',  
+         'address' :   '12-13-283/A1, Chinchwad, Pune',  
+         'email'   :   'malik_sharif@yahoo.com'
+	}  
+    });
+</script>
+</head>  
+<body>
+	<p>Displing model data in view through controller</p>  
+	<div ng-controller="UserController">  
+		<h3>{{ user.name }} </h3>  
+		<h3>{{ user.address }} </h3>  
+		<h3>{{ user.email }} </h3>  
+	</div>  
+</body>
+</html>
+
