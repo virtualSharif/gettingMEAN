@@ -1,0 +1,20 @@
+<html>
+   
+   <head>
+      <title>AngularJS Application</title>
+   <script src = "./lib/angular.min.js"></script>
+   </head>
+   
+   <body>
+      <h1>Two way binding Application</h1>
+      
+      <div ng-app = "">
+         <p>Enter your name: <input type = "text" ng-model = "name"></p>
+         <p>Hello <span ng-bind = "name"></span>!</p>
+	
+	Author of this page is {{name}}.
+      </div>
+      
+      
+   </body>
+</html>
