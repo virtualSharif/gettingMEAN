@@ -1,0 +1,23 @@
+<html ng-app="myApp">
+<head>
+<title>AngularJS MVC Architecture code</title>  
+<script src="./lib/angular.min.js"></script>
+<!-- main app -->
+<script src= "./app.js"></script>
+
+<!-- controllers-->
+<script src= "./userController.js"></script>
+
+</head>  
+
+<body>
+	<p>Displing model data in view through controller</p>  
+	<div ng-controller="UserController">  
+		<h3>{{ user.name }} </h3>  
+		<h3>{{ user.address }} </h3>  
+		<h3>{{ user.email }} </h3>  
+	</div>  
+</body>
+
+</html>
+
