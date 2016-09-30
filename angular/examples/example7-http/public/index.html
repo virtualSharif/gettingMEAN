@@ -1,0 +1,19 @@
+<html ng-app="myApp">
+<head>
+<title>AngularJS</title>  
+<script src="./lib/angular.min.js"></script>
+<script src= "./app.js"></script>
+</head>  
+
+<body>
+	<p>Fetching data from node.js Server application</p>  
+	<div ng-controller="UserController">  
+		<div ng-repeat="user in users">
+		<h4>First Name : {{ user.firstName }}, Last Name : {{ user.lastName }} , Email Id : {{ user.emailId }} </h4>
+<hr/>
+		</div>  
+	</div>  
+</body>
+
+</html>
+
