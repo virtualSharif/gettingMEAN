@@ -1,4 +1,6 @@
-# Mini Project - CRUD operation of User( Create , Update, Retrieve, Delete)
+# Mini Project - Getting MEAB
+CRUD operation of User( Create , Update, Retrieve, Delete)
+
 ## Author : Sharif Malik
 
 # Step 1: To run : start the mongod  
