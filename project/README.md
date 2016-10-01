@@ -1,9 +1,9 @@
-# Mini Project - Getting MEAB
+# Mini Project - Getting MEAN
 CRUD operation of User( Create , Update, Retrieve, Delete)
 
 ## Author : Sharif Malik
 
-# Step 1: To run : start the mongod  
+# Step 1: To run : start the mongod (Mongo db Server) 
 
 	Windows : 
         mongod --dbpath=/data/db
