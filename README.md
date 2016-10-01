@@ -1,4 +1,5 @@
 # Getting MEAN  - A practical Workshop | Sharif Malik
+Learning and doing practical example over Mongo db , Express JS , Angular JS and Node JS
 
 Sequence to follow :
 
