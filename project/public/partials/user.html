@@ -1,0 +1,29 @@
+<div>
+    <div class="row">
+	<div class="col-md-12">
+		<button class="btn btn-sm btn-primary pull-right" ng-click="editUser('new')"> Add</button>	
+	</div>
+    </div>	
+    <br/>
+    <table class="table table-stripped table-hover">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+		<th>Action</th>
+            </tr>
+        </thead>
+        <tr>
+            <tbody>
+                <tr ng-repeat="user in users">
+                    <td ng-click="viewUser(user._id)">{{user.firstName}}</td>
+                    <td ng-click="viewUser(user._id)">{{user.lastName}}</td>
+                    <td>
+			<button class="btn btn-xs btn-primary" ng-click="viewUser(user._id)"> View</button>
+			<button class="btn btn-xs btn-info" ng-click="editUser(user._id)"> Edit</button>
+			<button class="btn btn-xs btn-danger" ng-click="deleteUser(user._id)"> Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+    </table>
+</div>

@@ -1,0 +1,20 @@
+# Mini Project - Getting MEAN Workshop
+## Author : Sharif Malik
+
+# Step 1: To run : start the mongod  
+
+	Windows : 
+        mongod --dbpath=/data/db
+	        
+	Linux or Mac OS : 
+        sudo mongod --dbpath=/data/db
+        
+# Step 2 : Run the node js application 
+        node app.js
+        
+        
+# Step 3 : See the output
+        Open the below link in any browser:
+        http://localhost:1991/
+
+# Step 4 : Congratulations! Application is ready for the end user.
