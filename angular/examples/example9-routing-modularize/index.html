@@ -1,0 +1,26 @@
+<html ng-app = "mainApp">
+   <head>
+      <title>Angular JS Views</title>
+	<script src="./lib/angular.min.js"></script>
+	<script src="./lib/angular-route.js"></script>
+	
+	<script src="./js/app.js"></script>	
+	<script src="./js/controller/addUserController.js"></script>
+	<script src="./js/controller/viewUserController.js"></script>
+
+   </head>
+   
+   <body>
+      <h2>AngularJS Single Page Application</h2>
+      <div>
+         <p><a href = "#/add">Add Users</a></p>
+         <p><a href = "#/view">View Users</a></p>
+         <p><a href = "#/about">About Author</a></p>
+	
+	<!-- container for partials -->
+	<div ng-view></div>
+	
+      </div>
+   </body>
+</html>
+
