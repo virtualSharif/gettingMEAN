@@ -18,3 +18,5 @@
         http://localhost:1991/
 
 # Step 4 : Congratulations! Application is ready for the end user.
+
+![alt tag](https://github.com/virtualSharif/gettingMEAN/blob/master/project/ouput_img/output_landing_page.png)
