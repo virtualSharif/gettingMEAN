@@ -8,5 +8,5 @@ app.controller('UserController', function($scope) {
 		'email'   :   'malik_sharif@yahoo.com'
 	};  
 
-	$scope.message = "I am writing a message";
+	var message = "I am writing a message";
 });
