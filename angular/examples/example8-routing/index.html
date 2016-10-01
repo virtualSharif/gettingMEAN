@@ -1,0 +1,51 @@
+<html>
+   <head>
+      <title>Angular JS Views</title>
+	<script src="./lib/angular.min.js"></script>
+	<script src="./lib/angular-route.js"></script>
+   </head>
+   
+   <body>
+      <h2>AngularJS Single Page Application</h2>
+      <div ng-app = "mainApp">
+         <p><a href = "#/add">Add Users</a></p>
+         <p><a href = "#/view">View Users</a></p>
+        
+	 <div ng-view></div>
+        
+      </div>
+      
+      <script>
+         var mainApp = angular.module("mainApp", ['ngRoute']);
+
+         mainApp.config(function($routeProvider) {
+            $routeProvider.
+            
+            when('/add', {
+               templateUrl: 'addUser.html',
+               controller: 'AddUserController'
+            }).
+            
+            when('/view', {
+               templateUrl: 'viewUser.html',
+               controller: 'ViewUserController'
+            }).
+            
+            otherwise({
+               redirectTo: '/add'
+            });
+         });
+         
+         mainApp.controller('AddUserController', function($scope) {
+            $scope.message = "This page will be used to display add user form";
+         });
+         
+         mainApp.controller('ViewUserController', function($scope) {
+            $scope.message = "This page will be used to display all the users";
+         });
+			
+      </script>
+      
+   </body>
+</html>
+
