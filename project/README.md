@@ -1,4 +1,4 @@
-# Mini Project - Getting MEAN Workshop
+# Mini Project - CRUD operation of User( Create , Update, Retrieve, Delete)
 ## Author : Sharif Malik
 
 # Step 1: To run : start the mongod  
