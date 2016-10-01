@@ -1,5 +1,3 @@
-var app = angular.module('myApp', []);
-  
 //Creating controller here  
 app.controller('UserController', function($scope) {  
 	
@@ -9,4 +7,6 @@ app.controller('UserController', function($scope) {
 		'address' :   '12-13-283/A1, Chinchwad, Pune',  
 		'email'   :   'malik_sharif@yahoo.com'
 	};  
+
+	$scope.message = "I am writing a message";
 });
