@@ -16,8 +16,8 @@
         <tr>
             <tbody>
                 <tr ng-repeat="user in users">
-                    <td ng-click="viewUser(user._id)">{{user.firstName}}</td>
-                    <td ng-click="viewUser(user._id)">{{user.lastName}}</td>
+                    <td ng-dblclick="viewUser(user._id)">{{user.firstName}}</td>
+                    <td ng-dblclick="viewUser(user._id)">{{user.lastName}}</td>
                     <td>
 			<button class="btn btn-xs btn-primary" ng-click="viewUser(user._id)"> View</button>
 			<button class="btn btn-xs btn-info" ng-click="editUser(user._id)"> Edit</button>

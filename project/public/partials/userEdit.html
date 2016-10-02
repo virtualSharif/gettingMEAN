@@ -21,8 +21,8 @@
 </div>
 <div class="row">
 	<div class= "col-md-12">
-	<button class="btn btn-sm btn-success" ng-if="isNew()" ng-click="saveUser()" >Save</button>
-	<button class="btn btn-sm btn-success" ng-if="!isNew()" ng-click="updateUser()" >Update</button>
+	<button class="btn btn-sm btn-success" ng-show="isNew()" ng-click="saveUser()" >Save</button>
+	<button class="btn btn-sm btn-success" ng-show="!isNew()" ng-click="updateUser()" >Update</button>
 	<button class="btn btn-sm btn-default" ng-click="cancel()" >Cancel</button>
 	</div>
 

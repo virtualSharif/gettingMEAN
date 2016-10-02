@@ -3,29 +3,28 @@ app.controller('UserEditCtrl', function ($routeParams, $scope, $http, $location)
 	$scope.id = $routeParams.userId;
 
 	$scope.isNew = function () {
-		if($scope.id == 'new')
+		if($scope.id === 'new')
 			return true;
 		return false; 
 	};
 
-	var compileData = function () {
+	var createRequestData = function () {
 		var data = {
 			'firstName' : $scope.user.firstName,
 			'lastName' : $scope.user.lastName,
 			'emailId' : $scope.user.emailId		
 		};
-		console.log(data);
 		return data;
 	};
 	
 	$scope.saveUser = function () {
-		$http.post('/api/users', compileData()).then(function (response) {
+		$http.post('/api/users', createRequestData() ).then(function (response) {
 			$location.path('/users');		
 		});
 	};	
 
 	$scope.updateUser = function () {
-		$http.put('/api/users/' + $scope.id, compileData()).then(function (response) {
+		$http.put('/api/users/' + $scope.id, createRequestData()).then(function (response) {
 			$location.path('/users');	
 		});
 	};
